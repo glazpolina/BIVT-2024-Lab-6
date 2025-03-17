@@ -122,7 +122,7 @@ namespace Lab_6
                 Group finale = new Group("Финалисты");
                 int[] merged_array= new int[size];
                 int i=0, j=0;
-                while(i<group1.Teams.Length && j < group2.Teams.Length)
+                while(i < size/2 && j < size/2)////
                 {
                     if (group1.Teams[i].TotalScore >= group2.Teams[j].TotalScore)
                     {

@@ -45,11 +45,11 @@ namespace Lab_6
             private Sportsman[] _sportsman;
             private int _counter;
             public string Name => _name;
-            public Sportsman[] Sportsman
+            public Sportsman[] Sportsmen
             {
                 get
                 {
-                    if (_sportsman.Length == 0 || _sportsman == null) return null;
+                    if (_sportsman == null) return null;///
                     Sportsman[] copyar = new Sportsman[_sportsman.Length];
                     for (int i = 0; i < _sportsman.Length; i++) 
                     { 
@@ -84,11 +84,11 @@ namespace Lab_6
             {
                 get
                 {
-                    if (_sportsman == null || _sportsman.Length == 0) return 0;
+                    if (_sportsman == null) return 0;///
                     int best = 18;
                     for(int i = 0; i < _sportsman.Length; i++)
                     {
-                        if(_sportsman[i].Place < best) best = _sportsman[i].Place;
+                        if((_sportsman[i].Place < best) && (_sportsman[i].Place>0)) best = _sportsman[i].Place;//
                     }
                     return best;
                 }
@@ -103,11 +103,12 @@ namespace Lab_6
 
             public void Add(Sportsman newsportsman)
             {
-                if (_sportsman.Length == 0 || _sportsman ==null) return;
-                if (_counter < _sportsman.Length) 
+                if (_sportsman == null) return;///
+                if (_counter < _sportsman.Length)
                 {
                     _sportsman[_counter++] = newsportsman;
                 }
+                else return;///
             }
 
             public void Add(Sportsman[] newsportsman)

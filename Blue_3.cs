@@ -18,8 +18,8 @@ namespace Lab_6
             public string Surname => _surname;
             public int[] PenaltyTimes { 
                 get {
-                    if (_out_min.Length == 0) return _out_min;
-                    if (_out_min == null) return null;
+                    
+                    if (_out_min == null) return null;//
                     int[]copiedarray = new int[_out_min.Length];
                     for (int i = 0; i < _out_min.Length; i++)
                     {
@@ -47,7 +47,7 @@ namespace Lab_6
             {
                 get
                 {
-                    if (_out_min == null || _out_min.Length == 0) return true;
+                    if (_out_min == null || _out_min.Length == 0) return false;//
                     for (int i = 0; i<_out_min.Length; i++)
                     {
                         if (_out_min[i] == 10) return true;
