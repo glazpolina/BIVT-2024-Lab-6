@@ -45,19 +45,9 @@ namespace Lab_6
             private Sportsman[] _sportsman;
             private int _counter;
             public string Name => _name;
-            public Sportsman[] Sportsmen
-            {
-                get
-                {
-                    if (_sportsman == null) return null;///
-                    Sportsman[] copyar = new Sportsman[_sportsman.Length];
-                    for (int i = 0; i < _sportsman.Length; i++) 
-                    { 
-                        copyar[i] = _sportsman[i]; 
-                    }
-                    return copyar;
-                }
-            }
+            public Sportsman[] Sportsmen => _sportsman;
+                ////77777
+            
             public int SummaryScore
             {
                 get

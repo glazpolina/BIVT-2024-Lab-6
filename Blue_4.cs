@@ -135,19 +135,20 @@ namespace Lab_6
                         j++;
                     }
                 }
-                while (i < group1.Teams.Length)
+
+                while (i < size/2)///
                 {
                     finale.Add(group1.Teams[i]);
                     i++;
 
                 }
-                while (j < group2.Teams.Length)
+                while (j < size/2)///
                 {
                     finale.Add(group2.Teams[j]);
                     j++;
 
                 }
-                return finale;
+                return finale;///
             }
 
             public void Print()
